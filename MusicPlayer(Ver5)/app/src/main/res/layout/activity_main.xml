@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/a444">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#D8DFE0">
+
+        <TextView
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+
+            android:id="@+id/Mu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"/>
+        <Button
+            android:id="@+id/tuichu_btn"
+            android:onClick="tuichu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:background="#0000"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="275dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_music"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="8.1"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_play"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:background="#CBDBDA"
+        android:padding="3dp">
+
+        <SeekBar
+            android:id="@+id/sb_play"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/iv_playing"/>
+
+        <ImageView
+            android:id="@+id/iv_playing"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/a1"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_pname"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="19dp"
+            android:layout_toRightOf="@id/iv_playing"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="请点歌! φ(≧ω≦*)♪"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_partist"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pname"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/iv_playing"
+            android:text="......"
+            android:textColor="#000"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/sb_play"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:background="#0000"
+            android:scaleType="fitXY"
+            android:src="@drawable/pause" />
+    </RelativeLayout>
+
+</LinearLayout>

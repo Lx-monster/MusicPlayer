@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity"
+    android:orientation="vertical"
+    android:background="@drawable/a234"
+    android:padding="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="38dp"
+            android:layout_height="30dp"
+            android:background="#0000"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/left"
+            android:textSize="15sp"/>
+
+        <ImageButton
+            android:id="@+id/ib_info"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="#0000"
+            android:onClick="info"
+            android:scaleType="fitXY"
+            android:src="@drawable/genduo"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_gravity="center"
+
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/tv_mName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music Name"
+        android:textSize="30sp"
+        android:padding="4dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"/>
+    <TextView
+        android:id="@+id/tv_mArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music Info"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textColor="#000"/>
+    <SeekBar
+        android:id="@+id/sb_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageButton
+            android:id="@+id/ib_order"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:onClick="list"
+            android:scaleType="fitXY"
+            android:src="@drawable/list" />
+
+        <ImageButton
+            android:id="@+id/ib_pre"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:onClick="pre"
+            android:scaleType="fitXY"
+            android:src="@drawable/a6" />
+
+        <ImageButton
+            android:id="@+id/ib_ss"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:scaleType="fitXY"
+            android:src="@drawable/pause"
+            android:onClick="startplay" />
+        <ImageButton
+            android:onClick="next"
+            android:id="@+id/ib_next"
+            android:layout_width="75dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="#0000"
+            android:scaleType="fitXY"
+            android:src="@drawable/a61"
+            android:layout_margin="15dp"/>
+
+        <ImageButton
+            android:id="@+id/ib_list"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:onClick="list"
+            android:scaleType="fitXY"
+            android:src="@drawable/ali" />
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--        android:background="@drawable/p21"-->
